@@ -8,9 +8,11 @@ This project demonstrates a Continuous Integration (CI) pipeline using Jenkins f
 
 - Java 21
 - Maven
-- TestNG 
+- TestNG
+- Selenium
 - Jenkins CI
 - Allure Report
+- poi-ooxml
 
 ---
 
