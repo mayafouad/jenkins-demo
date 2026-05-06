@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven3'
-        jdk 'JDK21'
-    }
-
     stages {
 
         stage('Clone') {
@@ -26,9 +21,11 @@ pipeline {
             }
         }
 
-        stage('Report') {
+        stage('Allure Report') {
             steps {
-                junit 'target/surefire-reports/*.xml'
+                allure([
+                    results: [[path: 'target/allure-results']]
+                ])
             }
         }
     }
